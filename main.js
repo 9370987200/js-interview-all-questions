@@ -131,31 +131,17 @@ console.log(into)
 }
 abcd(5,6)
 
+// __proto__ and prototype
 function demo(name,mark){
     this.name=name
     this.mark=mark
 }
 demo.prototype.age="24"
 let demo1=new demo("shivani","bhagyawant")
-// demo1.__proto__.first="pashu"
+demo1.__proto__.first="pashu"
 console.log(demo1)
 
-function a(){
-console.log("function 1")
-b()
-}
-function b(){
-console.log("function 2")
-c()
-}
-function c(){
-console.log("function 3")
-d()
- }   
-function d(){
-console.log("function 4")
-}      
-a()
+
 
 
 let obj1={
@@ -213,13 +199,66 @@ setInterval(()=>{
 })()
 
 
+inheritance
 
 
+// map 
+const a=[1,2,3,4]
+const arr=a.map((num)=>num+2)
+console.log(arr)
+
+filter 
+const a=[2,7,4,9,10,15]
+const b=a.filter((num)=>num>10)
+console.log(b)
+
+find 
+const a=[2,7,4,9,10,15,17]
+const b=a.find((num)=>num>10)
+console.log(b)
 
 
+// promise using print 1 to 5
+function print(number){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log(number)
+            resolve()
+        },1000)
+    })
+}
+let pro=Promise.resolve()
+for(let i=1;i<=5;i++){
+    pro=pro.
+    then(()=>print(i))
+}
 
 
+function change(){
+    const heading=document.createElement("h1")
+    heading.setAttribute("class","heading")
+    heading.innerHTML="heading"
+    document.getElementById("temp").appendChild(heading)
+}
 
+// event loop
+function one(){
+    console.log("1")
+    two()
+}
+
+function two(){
+    console.log("2")
+    three()
+}
+function three(){
+    console.log("3")
+    four()
+}
+function four(){
+    console.log("4")
+}
+one()
 
 
 
